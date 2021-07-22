@@ -8,32 +8,17 @@ const getMessages = () => {
         const data = snapshot.val();
         console.log(data);
     
-    
-
         for (let key in data){
-            if (key === passcode.value){
+            if (data[key].passcode === passcode.value){
                 console.log("match found");
                 const message = document.querySelector("#message");
-                message.innerHTML = data[key];
+                message.innerHTML = data[key].message;
                 matched = true;
                 break;
             }
-            else{
-                console.log("no match");
-                const message = document.querySelector("#message");
-                numTries = numTries + 1;
-                matched = false;
-                console.log("Number of tries: " + numTries);
-                message.innerHTML = "IMPORTANT: No messages found matching that passcode. Please try again.";
-                /*if (numTries >= 5){
-                    document.getElementById("viewMsg").disabled = true;
-                    const message = document.querySelector("#message");
-                    message.innerHTML = "Too many attempts, you can no longer view messages.";
-                 } */
-
-            }
+            
                 
-        }
+        } 
 
             
         
