@@ -8,6 +8,8 @@ const getMessages = () => {
         for (let key in data){
             if (key === passcode.value){
                 console.log("match found");
+                const message = document.querySelector("#message");
+                message.innerHTML = data[key];
             }
         }
     })
