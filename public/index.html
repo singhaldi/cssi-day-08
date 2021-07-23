@@ -32,6 +32,9 @@
           <img src="https://image.freepik.com/free-vector/colorful-speech-bubbles-set_74855-6314.jpg" width="325px" />
           <form action="javascript:void(0);">
             <div class="field">
+            <subtitle id = "passwordReq">
+                Password must contain 1 uppercase letter and 1 number!
+            </subtitle>
               <div class="control">
                 <input class="input is-medium is-rounded" type="text" id="passcode" placeholder="Enter a passcode" required />
               </div>
@@ -42,7 +45,7 @@
               </div>
             </div>
             <br />
-            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" onclick = "onSubmit()">
+            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" id = "sendButton" onclick = "onSubmit()">
               Send Message
             </button>
           </form>
